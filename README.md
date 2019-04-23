@@ -8,7 +8,7 @@ Clone project:
 Enter the project folder:  
 `$ cd aviasales`  
 
-Install dependensies:  
+Install dependences:  
 `$ npm install`  
 
 Link globally installed Webpack to project:  
