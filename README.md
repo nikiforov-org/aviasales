@@ -11,10 +11,10 @@ Enter the project folder:
 Install dependencies and start project automatically:   
 `$ npm i`  
 
-Browse [https://aviasales.test:12345](https://aviasales.test:12345).  
+Browse [http://aviasales.test:12345](http://aviasales.test:12345).  
 
 Starting project manually after installation:  
-`$ npm start` and browse [https://aviasales.test:12345](https://aviasales.test:12345).  
+`$ npm start` and browse [http://aviasales.test:12345](http://aviasales.test:12345).  
 
 Remove local domain:  
 `$ npm stop`  
