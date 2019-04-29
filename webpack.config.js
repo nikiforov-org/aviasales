@@ -5,6 +5,14 @@ module.exports = {
         path: __dirname + "/dist"
     },
 
+    mode: "development",
+
+    devServer: {
+        host: "aviasales.test",
+        port: 12345,
+        https: true
+    },
+
     // Enable sourcemaps for debugging webpack's output.
     devtool: "source-map",
 
