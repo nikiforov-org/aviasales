@@ -9,8 +9,7 @@ module.exports = {
 
     devServer: {
         host: "aviasales.test",
-        port: 12345,
-        https: true
+        port: 12345
     },
 
     // Enable sourcemaps for debugging webpack's output.
