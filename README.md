@@ -8,7 +8,13 @@ Clone project:
 Enter the project folder:  
 `$ cd aviasales`  
 
-Install dependences and start project:  
+Install dependencies and start project automatically:   
 `$ npm i`  
 
-Browse [https://aviasales.test:12345](https://aviasales.test:12345).
+Browse [https://aviasales.test:12345](https://aviasales.test:12345).  
+
+Starting project manually after installation:  
+`$ npm start` and browse [https://aviasales.test:12345](https://aviasales.test:12345).  
+
+Remove local domain:  
+`$ npm stop`  
