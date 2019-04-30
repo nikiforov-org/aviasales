@@ -17,4 +17,4 @@ Starting project manually after installation:
 `$ npm start` and browse [http://aviasales.test:12345](http://aviasales.test:12345).  
 
 Remove local domain:  
-`$ npm stop`  
+`$ npm stop`

@@ -1,11 +1,16 @@
 {
   "name": "aviasales",
   "version": "1.0.0",
-  "description": "Aviasales Test Task",
+  "description": "Aviasales test task",
   "main": "index.js",
   "scripts": {
     "postinstall": "npm start",
-    "start": "hostile set localhost aviasales.test && webpack && webpack-dev-server",
+    "start": "npm run host && npm run compilation && npm run servers",
+    "host": "hostile set localhost aviasales.test",
+    "compilation": "webpack",
+    "servers": "concurrently --kill-others \"npm run webserver\" \"npm run api\"",
+    "api": "json-server --host aviasales.test --watch ./api/tickets.json",
+    "webserver": "webpack-dev-server",
     "stop": "hostile remove aviasales.test"
   },
   "repository": {
@@ -18,26 +23,31 @@
     "task"
   ],
   "author": "Evgeny Nikiforov",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/nikiforov-org/aviasales/issues"
   },
   "homepage": "https://github.com/nikiforov-org/aviasales#readme",
-  "devDependencies": {
-    "awesome-typescript-loader": "^5.2.1",
-    "hostile": "^1.3.2",
-    "source-map-loader": "^0.2.4",
-    "typescript": "^3.4.5",
-    "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.1",
-    "webpack-dev-server": "^3.3.1"
-  },
   "dependencies": {
-    "@types/react": "^16.8.14",
-    "@types/react-dom": "^16.8.4",
-    "@types/react-redux": "^7.0.8",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-redux": "^7.0.3"
+    "typescript": "^3.4.5"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.14",
+    "@types/react-dom": "^16.8.4",
+    "concurrently": "^4.1.0",
+    "css-loader": "^2.1.1",
+    "hostile": "^1.3.2",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.7.1",
+    "json-server": "^0.14.2",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^5.4.4",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-middleware": "^3.6.2",
+    "webpack-dev-server": "^3.3.1",
+    "webpack-hot-middleware": "^2.24.4"
   }
 }
